@@ -10,15 +10,25 @@ In this exercise, you will be migrating the database from a Single PostgreSQL se
 2. After launching the Azure Cloud Shell, select the **Bash** option.
 
     ![](Images/E2T1S2.png)
-    
-3. Now on You have no storage mounted dialog box click on **Show advanced settings**.
 
-   ![](Images/E2T1S3.png)
+3. Within the Getting Started pane, select **Mount storage account**, select your **Storage account subscription** from the dropdown and click **Apply**.
+
+   ![](Images/cloudshell-getting-started.png)
+
+4. Within the **Mount storage account** pane, select **I want to create a storage account** and click **Next**.
+
+   ![](Images/cloudshell-mount-strg-account.png)
    
 4. Follow the below-mentioned instructions and click on **Create Storage (3)**.
 
-    - Storage account: Enter **stacc<inject key="DeploymentID" enableCopy="false"/> (1)**
-    - File Share: Enter **blob (2)**
+    - **Subscription**: Default- Choose the only existing subscription assigned for this lab (1).
+    - **CloudShell region**: <inject key="Region" enableCopy="false" /> (2)
+    - **Resource group**: Select **Use existing**.(3)
+      - ODL-SinToFlexible-<inject key="DeploymentID" enableCopy="false"></inject>
+    - **Storage account**: Select **Create new**.(4)
+      - stacc<inject key="DeploymentID" enableCopy="false"></inject>
+    - **File share**: Create a new file share named **blob** (5)
+    - Click **Create Storage** (6)
 
     ![](Images/E2T1S4.png)
     
@@ -73,7 +83,6 @@ In this exercise, you will be migrating the database from a Single PostgreSQL se
     
 ## Task 2: Migrate Data Base from Azure Database for PostgreSQL single server
 
-    
 1. Now navigate back to **Azure Database for PostgreSQL Flexible Server** resource page and select **Migration (1)** and click on **+ Create (2)**.
     
      ![](Images/img1-mig.png)
